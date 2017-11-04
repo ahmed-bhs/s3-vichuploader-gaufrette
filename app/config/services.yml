@@ -1,0 +1,11 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+    ct_file_store.s3:
+        class: AmazonS3
+        arguments:
+            options: { key: %aws_key%, secret: %aws_secret_key% }
+            
